@@ -1,29 +1,82 @@
+/* =======================
+   HACKER THEME STYLES
+   ======================= */
+
 body {
-    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #00ff00;
+    font-family: "Courier New", monospace;
     margin: 0;
-    background: #f5f5f5;
+    padding: 0;
 }
 
 header {
     text-align: center;
     padding: 40px;
-    background: #333;
-    color: white;
+    background: #000000;
+    border-bottom: 2px solid #00ff00;
+}
+
+h1, h2, h3 {
+    color: #00ff00;
+    text-shadow: 0 0 5px #00ff00;
 }
 
 section {
     padding: 20px;
+    border-bottom: 1px solid #003300;
 }
 
 .project {
-    background: white;
+    background: #000000;
     padding: 15px;
-    margin: 10px 0;
-    border-radius: 8px;
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+    margin: 15px 0;
 }
 
 .project img {
+    border: 2px solid #00ff00;
     width: 100%;
     max-width: 400px;
-    border-radius: 6px;
+}
+
+a {
+    color: #00ff00;
+    text-decoration: none;
+}
+
+a:hover {
+    text-shadow: 0 0 10px #00ff00;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 2px solid #00ff00;
+}
+
+/* Blinking hacker cursor */
+.cursor {
+    display: inline-block;
+    width: 10px;
+    height: 20px;
+    background: #00ff00;
+    margin-left: 5px;
+    animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+/* Flicker effect (optional) */
+h1 {
+    animation: flicker 2s infinite;
+}
+
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1; }
 }
