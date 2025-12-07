@@ -1,86 +1,38 @@
-/* =======================
-   HACKER THEME STYLES
-   ======================= */
-
+/* Hacker theme */
 body {
-    background-color: #000000;
-    color: #00ff00;
+    background-color: #000;
     font-family: "Courier New", monospace;
+    color: #00ff00;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
 header {
-    text-align: center;
-    padding: 40px;
-    background: #000000;
-    border-bottom: 2px solid #00ff00;
+    padding: 40px 20px;
 }
 
 h1, h2, h3 {
     color: #00ff00;
-    text-shadow: 0 0 5px #00ff00;
-}
-
-section {
-    padding: 20px;
-    border-bottom: 1px solid #003300;
-}
-
-.project {
-    background: #000000;
-    padding: 15px;
-    border: 1px solid #00ff00;
-    border-radius: 5px;
-    margin: 15px 0;
-}
-
-.project img {
-    border: 2px solid #00ff00;
-    width: 100%;
-    max-width: 400px;
-}
-
-a {
-    color: #00ff00;
-    text-decoration: none;
-}
-
-a:hover {
     text-shadow: 0 0 10px #00ff00;
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    border-top: 2px solid #00ff00;
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 20px auto;
+    width: 80%;
 }
 
-/* Blinking hacker cursor */
-.cursor {
-    display: inline-block;
-    width: 10px;
-    height: 20px;
-    background: #00ff00;
-    margin-left: 5px;
-    animation: blink 1s steps(1) infinite;
+/* Project images */
+.project img {
+    width: 80%;
+    border: 2px solid #00ff00;
+    box-shadow: 0 0 10px #00ff00;
+    margin-top: 15px;
 }
 
-@keyframes blink {
-    50% { opacity: 0; }
-}
-
-/* Flicker effect (optional) */
-h1 {
-    animation: flicker 2s infinite;
-}
-
-@keyframes flicker {
-    0% { opacity: 1; }
-    50% { opacity: 0.3; }
-    100% { opacity: 1; }
-}
-/* a Button */
+/* Big neon button */
 .button {
     display: inline-block;
     padding: 15px 30px;
@@ -100,4 +52,26 @@ h1 {
     box-shadow: 0 0 20px #00ff00;
     text-shadow: 0 0 10px #00ff00;
     transform: scale(1.05);
+}
+
+/* Cursor blink animation */
+.cursor {
+    display: inline-block;
+    width: 10px;
+    background-color: #00ff00;
+    margin-left: 4px;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    font-size: 16px;
+    opacity: 0.8;
 }
