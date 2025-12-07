@@ -1,42 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Projects – Prince Kiruhura</title>
+    <title>My UX Projects</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <header>
-        <h1>My Projects <span class="cursor"></span></h1>
-        <p>User Design Work • Fall Semester</p>
+        <h1>My Projects</h1>
+        <p>UI/UX Design Work from This Semester</p>
     </header>
 
     <section id="projects">
-        <h2>Projects</h2>
 
         <div class="project">
-            <h3>Project 1</h3>
-            <p>A short description of the project goes here.</p>
+            <h3>Prince Kiruhura App Redesign</h3>
+            <p>This project showcases the redesign I completed for my User Design course.</p>
             <img src="images/project1.png" alt="Project Screenshot">
         </div>
 
-        <!-- You can copy + paste this block for more projects -->
-        <!--
         <div class="project">
-            <h3>Project 2</h3>
-            <p>Description about project 2.</p>
-            <img src="images/project2.png" alt="Project Screenshot">
+            <h3>More Projects Coming Soon</h3>
+            <p>Additional class assignments and redesigns will be added here.</p>
         </div>
-        -->
-    </section>
 
-    <section id="back">
-        <a href="index.html" class="button">← Back to Home</a>
     </section>
 
     <footer>
-        <p>Contact: kiruhup23@bonaventure.edu</p>
+        <a href="index.html" class="button">Back to Home</a>
+        <p>© 2025 Prince Kiruhura</p>
     </footer>
 
 </body>

@@ -1,77 +1,39 @@
-/* Hacker theme */
 body {
-    background-color: #000;
-    font-family: "Courier New", monospace;
-    color: #00ff00;
+    background-color: #0a0a0a;
+    color: #00ff66;
+    font-family: Consolas, monospace;
     margin: 0;
     padding: 0;
-    text-align: center;
 }
 
-header {
-    padding: 40px 20px;
+header, section, footer {
+    text-align: center;
+    padding: 20px;
 }
 
 h1, h2, h3 {
-    color: #00ff00;
-    text-shadow: 0 0 10px #00ff00;
+    color: #00ff66;
 }
 
-p {
-    font-size: 18px;
-    line-height: 1.6;
-    margin: 20px auto;
-    width: 80%;
-}
-
-/* Project images */
-.project img {
-    width: 80%;
-    border: 2px solid #00ff00;
-    box-shadow: 0 0 10px #00ff00;
-    margin-top: 15px;
-}
-
-/* Big neon button */
 .button {
     display: inline-block;
-    padding: 15px 30px;
-    margin: 30px auto;
-    font-size: 20px;
-    color: #00ff00;
-    border: 2px solid #00ff00;
+    padding: 10px 20px;
+    background: black;
+    color: #00ff66;
+    border: 1px solid #00ff66;
     text-decoration: none;
-    border-radius: 8px;
-    text-align: center;
-    transition: 0.3s;
-    background: #000000;
-    box-shadow: 0 0 10px #00ff00;
+    border-radius: 4px;
+    margin-top: 10px;
 }
 
 .button:hover {
-    box-shadow: 0 0 20px #00ff00;
-    text-shadow: 0 0 10px #00ff00;
-    transform: scale(1.05);
+    background: #00ff66;
+    color: #000;
 }
 
-/* Cursor blink animation */
-.cursor {
-    display: inline-block;
-    width: 10px;
-    background-color: #00ff00;
-    margin-left: 4px;
-    animation: blink 0.7s infinite;
-}
-
-@keyframes blink {
-    0% { opacity: 1; }
-    50% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-footer {
-    margin-top: 40px;
-    padding: 20px;
-    font-size: 16px;
-    opacity: 0.8;
+img {
+    width: 80%;
+    max-width: 300px;
+    border: 2px solid #00ff66;
+    margin-top: 10px;
 }
