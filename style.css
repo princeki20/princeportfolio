@@ -1,45 +1,30 @@
-/* GENERAL STYLING */
+/* HACKER THEME – Dark terminal background + neon green text */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
     margin: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: "Courier New", monospace;
+    background-color: #0a0a0a;
+    color: #00ff88;
+    line-height: 1.6;
 }
 
 /* NAVIGATION */
 .topnav {
-    background-color: #222;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-.topnav a {
-    color: #fff;
-    margin-left: 20px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.topnav a.active {
-    text-decoration: underline;
+    background-color: #000;
+    color: #00ff88;
+    padding: 20px 40px;
+    text-align: left;
+    border-bottom: 2px solid #00ff88;
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: bold;
+    text-shadow: 0 0 8px #00ff88;
 }
 
 /* HERO SECTION */
 .hero-section {
     padding: 60px 20px;
-    background-color: #fcfcfc;
 }
 
 .hero-container {
@@ -50,11 +35,12 @@ body {
     gap: 40px;
 }
 
-.hero-left .profile-pic {
-    width: 250px;
-    height: 250px;
+.profile-pic {
+    width: 260px;
+    height: 260px;
     border-radius: 50%;
-    border: 3px solid #222;
+    border: 3px solid #00ff88;
+    box-shadow: 0 0 20px #00ff88;
 }
 
 .hero-right {
@@ -63,63 +49,69 @@ body {
 
 .hero-right h2 {
     font-size: 2rem;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px #00ff88;
 }
 
 .hero-right p {
     margin-bottom: 20px;
 }
 
-/* PROJECTS & RESUME */
+/* BUTTONS */
+.button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #000;
+    color: #00ff88;
+    border: 2px solid #00ff88;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 0 10px #00ff88;
+}
+
+.button:hover {
+    background-color: #00ff88;
+    color: #000;
+    box-shadow: 0 0 20px #00ff88;
+}
+
+/* PROJECT SECTION */
 .project-section {
     padding: 60px 20px;
     max-width: 900px;
     margin: auto;
 }
 
-.project-card, .resume-section .button {
-    background-color: #f0ecec;
-    padding: 25px;
-    margin: 20px 0;
-    border-radius: 10px;
-    box-shadow: 0 3px 8px rgba(223, 223, 223, 0.1);
+.project-intro {
     text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
 }
 
-.project-card h3 {
-    margin-bottom: 10px;
-}
-
-.project-card .button, .resume-button {
-    display: inline-block;
-    padding: 12px 25px;
-    background-color: #222;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s;
-}
-
-.project-card .button:hover, .resume-button:hover {
-    background-color: #3d3d3d;
+.project-card {
+    background-color: #111;
+    border: 2px solid #00ff88;
+    padding: 25px;
+    border-radius: 10px;
+    margin: 25px 0;
+    box-shadow: 0 0 15px #00ff88;
 }
 
 /* FOOTER */
 footer {
-    background-color: #222;
-    color: #fff;
+    background-color: #000;
+    color: #00ff88;
     text-align: center;
     padding: 20px 0;
-    margin-top: 60px;
+    border-top: 2px solid #00ff88;
 }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
     .hero-container {
         flex-direction: column;
-    }
-
-    .hero-left, .hero-right {
         text-align: center;
     }
 }
