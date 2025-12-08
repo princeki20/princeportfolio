@@ -39,7 +39,7 @@ body {
 /* HERO SECTION */
 .hero-section {
     padding: 60px 20px;
-    background-color: #fff;
+    background-color: #fcfcfc;
 }
 
 .hero-container {
@@ -82,7 +82,7 @@ body {
     padding: 25px;
     margin: 20px 0;
     border-radius: 10px;
-    box-shadow: 0 3px 8px rgba(255, 5, 5, 0.1);
+    box-shadow: 0 3px 8px rgba(223, 223, 223, 0.1);
     text-align: center;
 }
 
@@ -101,7 +101,7 @@ body {
 }
 
 .project-card .button:hover, .resume-button:hover {
-    background-color: #555;
+    background-color: #3d3d3d;
 }
 
 /* FOOTER */
