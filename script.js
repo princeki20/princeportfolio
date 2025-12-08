@@ -20,7 +20,7 @@ const ctx = canvas.getContext("2d");
 canvas.height = window.innerHeight;
 canvas.width = window.innerWidth;
 
-const matrix = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+const matrix = "PRINCE KIRUHURA";
 const drops = Array(Math.floor(canvas.width / 15)).fill(1);
 
 function drawMatrix() {
