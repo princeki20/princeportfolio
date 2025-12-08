@@ -1,35 +1,81 @@
 body {
-    background: #f8f3f3;
-    color: #020000;
-    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #1a0033, #001133, #00334d);
+    background-size: cover;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-h1, h2 {
-    color: #00eaff;
-    text-shadow: 0 0 10px #00eaff;
+/* HEADER */
+header {
+    text-align: center;
+    padding: 25px 0;
 }
 
-.project {
-    border: 1px solid #ff00aa;
-    padding: 20px;
-    margin: 20px auto;
-    width: 80%;
-    background: #1a1a1a;
-    box-shadow: 0 0 15px #ff00aa88;
-    border-radius: 10px;
+h1 {
+    color: #ff00ff;
+    text-shadow: 0 0 15px #ff00ff;
+    font-size: 3rem;
+    margin-bottom: 10px;
 }
 
-a.button {
-    background: #ff00aa;
-    padding: 10px 20px;
+h2 {
+    color: #ff99ff;
+    text-shadow: 0 0 10px #ff66ff;
+}
+
+/* HERO SECTION */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    gap: 50px;
+}
+
+/* PROFILE PIC BUBBLE */
+.profile-pic img {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #ff00ff;
+    box-shadow: 0 0 20px #ff00ff;
+}
+
+/* ABOUT TEXT */
+.about-text {
+    max-width: 500px;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+/* BUTTON */
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #ff00cc;
     color: white;
-    border-radius: 6px;
+    border-radius: 8px;
     text-decoration: none;
-    box-shadow: 0 0 12px #ff00aa;
+    margin-top: 20px;
+    font-weight: bold;
+    box-shadow: 0 0 15px #ff00cc;
 }
 
-a.button:hover {
+.button:hover {
     background: #00eaff;
-    box-shadow: 0 0 18px #00eaff;
+    box-shadow: 0 0 20px #00eaff;
     color: #000;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #ffccff;
 }
