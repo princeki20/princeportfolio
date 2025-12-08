@@ -1,124 +1,93 @@
-/* GLOBAL */
-body {
-    margin: 0;
-    font-family: "Courier New", monospace;
-    background: #000;
-    color: #00ff88;
-    overflow-x: hidden;
+/* THEME SWITCH */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 55px;
+    height: 28px;
 }
 
-#matrixCanvas {
-    position: fixed;
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    background-color: #444;
+    border-radius: 28px;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+    right: 0;
+    bottom: 0;
+    transition: .3s;
 }
 
-/* TERMINAL INTRO */
-.terminal-intro {
-    width: 100%;
-    padding: 20px;
-    background: black;
-    border-bottom: 2px solid #00ff88;
-    box-shadow: 0 0 15px #00ff88;
-}
-#typed-text {
-    white-space: pre-line;
-    font-size: 1rem;
-    color: #00ff88;
-}
-
-/* NAV */
-.topnav {
-    background-color: #000;
-    padding: 20px 40px;
-    border-bottom: 2px solid #00ff88;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-size: 1.6rem;
-    text-shadow: 0 0 10px #00ff88;
-}
-
-/* BUTTONS */
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    border: 2px solid #00ff88;
-    background: #000;
-    color: #00ff88;
-    border-radius: 6px;
-    text-decoration: none;
-    box-shadow: 0 0 10px #00ff88;
-    transition: 0.3s;
-    cursor: pointer;
-}
-.button:hover {
-    background: #00ff88;
-    color: #000;
-    box-shadow: 0 0 25px #00ff88;
-}
-.small-btn {
-    padding: 6px 14px;
-    font-size: 0.9rem;
-}
-
-/* HERO */
-.hero-section {
-    padding: 60px 20px;
-}
-.hero-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    justify-content: center;
-    align-items: center;
-}
-.profile-pic {
-    width: 260px;
-    height: 260px;
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
     border-radius: 50%;
-    border: 3px solid #00ff88;
+    transition: .3s;
 }
 
-/* PROJECT GRID */
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
+input:checked + .slider {
+    background-color: #00ff88;
 }
 
-.project-card {
-    background: #0d0d0d;
-    border: 2px solid #00ff88;
-    padding: 25px;
-    border-radius: 8px;
+input:checked + .slider:before {
+    transform: translateX(26px);
 }
-.glow-card {
-    animation: pulse 2.5s infinite alternate;
-}
-@keyframes pulse {
-    from { box-shadow: 0 0 10px #00ff88; }
-    to   { box-shadow: 0 0 25px #00ff88; }
+/* LIGHT MODE */
+.light-mode {
+    background: #f7f7f7 !important;
+    color: #000 !important;
 }
 
-/* FOOTER */
-footer {
-    padding: 20px;
-    text-align: center;
-    border-top: 2px solid #00ff88;
-    background: #000;
-    font-size: 0.9rem;
+.light-mode .topnav {
+    background: #fff !important;
+    border-bottom: 2px solid #000 !important;
 }
 
-/* MOBILE FIX */
-@media (max-width: 768px) {
-    .project-grid {
-        grid-template-columns: 1fr;
-    }
+.light-mode .terminal-intro {
+    background: #fff !important;
+    border-bottom: 2px solid #000 !important;
+    box-shadow: none !important;
+}
+
+.light-mode #typed-text {
+    color: #000 !important;
+}
+
+.light-mode .logo {
+    color: #000 !important;
+    text-shadow: none !important;
+}
+
+.light-mode .button {
+    background: #fff !important;
+    color: #000 !important;
+    border: 2px solid #000 !important;
+    box-shadow: none !important;
+}
+
+.light-mode .button:hover {
+    background: #000 !important;
+    color: #fff !important;
+}
+
+.light-mode .project-card {
+    background: #fff !important;
+    color: #000 !important;
+    border: 2px solid #000 !important;
+    box-shadow: none !important;
+}
+
+.light-mode footer {
+    background: #fff !important;
+    color: #000 !important;
+    border-top: 2px solid #000 !important;
 }

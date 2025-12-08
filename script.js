@@ -43,16 +43,9 @@ function drawMatrix() {
 setInterval(drawMatrix, 40);
 
 
-// SOUND EFFECTS
-const clickSound = document.getElementById("clickSound");
-const beepSound = document.getElementById("beepSound");
+// LIGHT MODE TOGGLE
+const themeToggle = document.getElementById("themeToggle");
 
-document.querySelectorAll(".button").forEach(btn => {
-    btn.addEventListener("mouseenter", () => clickSound.play());
-    btn.addEventListener("click", () => beepSound.play());
+themeToggle.addEventListener("change", () => {
+    document.body.classList.toggle("light-mode", themeToggle.checked);
 });
-
-// DARK MODE / TERMINAL OFF MODE
-document.getElementById("modeToggle").onclick = () => {
-    document.body.classList.toggle("light-mode");
-};
