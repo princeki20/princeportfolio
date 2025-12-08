@@ -11,14 +11,13 @@
     <header class="topnav">
         <h1 class="logo">Prince Kiruhura</h1>
         <nav>
-            <a href="index.html" class="active">Home</a>
-            <a href="projects.html">Projects</a>
-            <a href="resume.html">Resume</a>
+            <a href="#hero" class="active">Home</a>
+            <a href="#projects">Projects</a>
         </nav>
     </header>
 
     <!-- HERO SECTION -->
-    <section class="hero-section">
+    <section id="hero" class="hero-section">
         <div class="hero-container">
             <div class="hero-left">
                 <img src="images/me.png" alt="Prince Kiruhura" class="profile-pic">
@@ -30,9 +29,31 @@
                     This portfolio highlights projects I completed this semester, including app redesigns, wireframing, 
                     prototyping, and UI/UX design concepts.
                 </p>
-                <a href="projects.html" class="button">See My Work</a>
             </div>
         </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="project-section">
+        <h2>Design Projects</h2>
+        <p style="text-align:center; max-width:700px; margin: 0 auto 40px auto;">
+            Below are some of the key projects I completed in my User Design class. 
+            Click the buttons to open each project PDF.
+        </p>
+
+        <div class="project-card">
+            <h3>The Buzz Redesign</h3>
+            <p>Open the full project document to see the redesign process and final results.</p>
+            <a href="projects/The%20buzz%20redesign.pdf" target="_blank" class="button">View Project</a>
+        </div>
+
+        <!-- Add more PDF projects here -->
+
+    </section>
+
+    <!-- RESUME BUTTON AT BOTTOM -->
+    <section class="resume-section" style="text-align:center; margin: 60px 0;">
+        <a href="projects/PrinceKiruhura_Resume.pdf" target="_blank" class="button resume-button">My Resume</a>
     </section>
 
     <!-- FOOTER -->
