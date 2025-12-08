@@ -1,81 +1,45 @@
-body {
-    background: linear-gradient(135deg, #1a0033, #001133, #00334d);
-    background-size: cover;
-    color: #ffffff;
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
+/* ---------- ANIMATIONS ---------- */
+
+.fade-in {
+    animation: fadeIn 1s ease;
 }
 
-/* HEADER */
-header {
-    text-align: center;
-    padding: 25px 0;
+.slide-up {
+    animation: slideUp 1.2s ease;
 }
 
-h1 {
-    color: #ff00ff;
-    text-shadow: 0 0 15px #ff00ff;
-    font-size: 3rem;
-    margin-bottom: 10px;
+.pulse img {
+    animation: pulse 3s infinite ease-in-out;
 }
 
-h2 {
-    color: #ff99ff;
-    text-shadow: 0 0 10px #ff66ff;
+.bounce {
+    animation: bounce 2s infinite;
 }
 
-/* HERO SECTION */
-.hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 60px;
-    gap: 50px;
+.hover-glow:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px #ff00ff;
 }
 
-/* PROFILE PIC BUBBLE */
-.profile-pic img {
-    width: 260px;
-    height: 260px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 5px solid #ff00ff;
-    box-shadow: 0 0 20px #ff00ff;
+/* ----- KEYFRAMES ----- */
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
-/* ABOUT TEXT */
-.about-text {
-    max-width: 500px;
+@keyframes slideUp {
+    from { transform: translateY(40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
 
-.about-text p {
-    font-size: 1.1rem;
-    line-height: 1.5;
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 20px #ff00ff; }
+    50% { transform: scale(1.05); box-shadow: 0 0 35px #00eaff; }
+    100% { transform: scale(1); box-shadow: 0 0 20px #ff00ff; }
 }
 
-/* BUTTON */
-.button {
-    display: inline-block;
-    padding: 12px 24px;
-    background: #ff00cc;
-    color: white;
-    border-radius: 8px;
-    text-decoration: none;
-    margin-top: 20px;
-    font-weight: bold;
-    box-shadow: 0 0 15px #ff00cc;
-}
-
-.button:hover {
-    background: #00eaff;
-    box-shadow: 0 0 20px #00eaff;
-    color: #000;
-}
-
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 20px;
-    color: #ffccff;
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
 }
