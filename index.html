@@ -7,13 +7,18 @@
 </head>
 <body>
 
+    <!-- TERMINAL TYPE INTRO -->
+    <div class="terminal-intro">
+        <p id="typed-text"></p>
+    </div>
+
     <!-- HEADER / NAV -->
     <header class="topnav">
         <h1 class="logo">Prince Kiruhura</h1>
     </header>
 
     <!-- HERO SECTION -->
-    <section id="hero" class="hero-section">
+    <section id="hero" class="hero-section fade-in">
         <div class="hero-container">
             <div class="hero-left">
                 <img src="images/princekiruhura.JPG" alt="Prince Kiruhura" class="profile-pic">
@@ -22,12 +27,12 @@
             <div class="hero-right">
                 <h2>Hello, I'm Prince Kiruhura</h2>
                 <p>
-                    I’m a User Design student passionate about creating clean and user-friendly digital experiences. 
-                    This portfolio highlights projects I completed this semester, including app redesigns, wireframing, 
+                    I’m a User Design student passionate about creating clean and user-friendly digital experiences.
+                    This portfolio highlights projects I completed this semester, including app redesigns, wireframing,
                     prototyping, and UI/UX design concepts.
                 </p>
 
-                <!-- RESUME BUTTON (Moved Here) -->
+                <!-- RESUME BUTTON -->
                 <a href="projects/Prince Kiruhura  Resume.pdf" 
                    target="_blank" class="button hero-resume">My Resume</a>
             </div>
@@ -35,31 +40,47 @@
     </section>
 
     <!-- PROJECTS SECTION -->
-    <section id="projects" class="project-section">
+    <section id="projects" class="project-section fade-in">
         <h2>Design Projects</h2>
         <p class="project-intro">
             Below are some of the key projects I completed in my User Design class.
             Click the buttons to open each PDF.
         </p>
 
-        <div class="project-card">
+        <div class="project-card glow-card">
             <h3>The Buzz Redesign</h3>
             <p>This project was a redesign of our school radio station.</p>
             <a href="projects/The%20buzz%20redesign.pdf" target="_blank" class="button">View Project</a>
         </div>
 
-        <div class="project-card">
+        <div class="project-card glow-card">
             <h3>Movie App Design</h3>
             <p>We recreated a local Upstate NY movie website into a mobile app design.</p>
             <a href="projects/Movie App design document.pdf" target="_blank" class="button">View Project</a>
         </div>
-
     </section>
 
     <!-- FOOTER -->
     <footer>
         <p>Email: kiruhup23@bonaventure.edu | Phone: (716) 395-5141</p>
     </footer>
+
+    <!-- TYPING SCRIPT -->
+    <script>
+        const text = "Initializing Portfolio System...\nLoading UI/UX Projects...\nWelcome, User.";
+        let index = 0;
+        const speed = 40;
+
+        function typeEffect() {
+            if (index < text.length) {
+                document.getElementById("typed-text").innerHTML += text.charAt(index);
+                index++;
+                setTimeout(typeEffect, speed);
+            }
+        }
+
+        window.onload = typeEffect;
+    </script>
 
 </body>
 </html>
