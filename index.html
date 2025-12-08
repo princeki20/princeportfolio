@@ -7,17 +7,22 @@
 </head>
 <body>
 
-    <!-- TERMINAL TYPE INTRO -->
+    <!-- MATRIX BACKGROUND -->
+    <canvas id="matrixCanvas"></canvas>
+
+    <!-- TERMINAL INTRO -->
     <div class="terminal-intro">
         <p id="typed-text"></p>
     </div>
 
-    <!-- HEADER / NAV -->
+    <!-- NAV -->
     <header class="topnav">
         <h1 class="logo">Prince Kiruhura</h1>
+
+        <button id="modeToggle" class="button small-btn">Toggle Terminal</button>
     </header>
 
-    <!-- HERO SECTION -->
+    <!-- HERO -->
     <section id="hero" class="hero-section fade-in">
         <div class="hero-container">
             <div class="hero-left">
@@ -28,59 +33,45 @@
                 <h2>Hello, I'm Prince Kiruhura</h2>
                 <p>
                     I’m a User Design student passionate about creating clean and user-friendly digital experiences.
-                    This portfolio highlights projects I completed this semester, including app redesigns, wireframing,
-                    prototyping, and UI/UX design concepts.
+                    This portfolio highlights projects I completed this semester.
                 </p>
 
-                <!-- RESUME BUTTON -->
-                <a href="projects/Prince Kiruhura  Resume.pdf" 
-                   target="_blank" class="button hero-resume">My Resume</a>
+                <a href="projects/Prince Kiruhura Resume.pdf" 
+                   target="_blank" class="button hero-resume beep">My Resume</a>
             </div>
         </div>
     </section>
 
-    <!-- PROJECTS SECTION -->
+    <!-- PROJECTS -->
     <section id="projects" class="project-section fade-in">
         <h2>Design Projects</h2>
-        <p class="project-intro">
-            Below are some of the key projects I completed in my User Design class.
-            Click the buttons to open each PDF.
-        </p>
+        <p class="project-intro">Click the buttons to open each PDF.</p>
 
-        <div class="project-card glow-card">
-            <h3>The Buzz Redesign</h3>
-            <p>This project was a redesign of our school radio station.</p>
-            <a href="projects/The%20buzz%20redesign.pdf" target="_blank" class="button">View Project</a>
-        </div>
+        <div class="project-grid">
 
-        <div class="project-card glow-card">
-            <h3>Movie App Design</h3>
-            <p>We recreated a local Upstate NY movie website into a mobile app design.</p>
-            <a href="projects/Movie App design document.pdf" target="_blank" class="button">View Project</a>
+            <div class="project-card glow-card">
+                <h3>The Buzz Redesign</h3>
+                <p>Redesign of the campus radio station website.</p>
+                <a href="projects/The buzz redesign.pdf" target="_blank" class="button beep">View Project</a>
+            </div>
+
+            <div class="project-card glow-card">
+                <h3>Movie App Design</h3>
+                <p>Converted a movie website into a mobile app mockup.</p>
+                <a href="projects/Movie App design document.pdf" target="_blank" class="button beep">View Project</a>
+            </div>
+
         </div>
     </section>
 
     <!-- FOOTER -->
     <footer>
-        <p>Email: kiruhup23@bonaventure.edu | Phone: (716) 395-5141</p>
+        <p>> System Contact: kiruhup23@bonaventure.edu</p>
     </footer>
 
-    <!-- TYPING SCRIPT -->
-    <script>
-        const text = "Initializing Portfolio System...\nLoading UI/UX Projects...\nWelcome, User.";
-        let index = 0;
-        const speed = 40;
+    <audio id="clickSound" src="https://assets.mixkit.co/active_storage/sfx/2000/2000.wav"></audio>
+    <audio id="beepSound" src="https://assets.mixkit.co/active_storage/sfx/2018/2018.wav"></audio>
 
-        function typeEffect() {
-            if (index < text.length) {
-                document.getElementById("typed-text").innerHTML += text.charAt(index);
-                index++;
-                setTimeout(typeEffect, speed);
-            }
-        }
-
-        window.onload = typeEffect;
-    </script>
-
+    <script src="script.js"></script>
 </body>
 </html>

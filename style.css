@@ -1,10 +1,19 @@
-/* GLOBAL HACKER THEME */
+/* GLOBAL */
 body {
     margin: 0;
     font-family: "Courier New", monospace;
-    background-color: #050505;
+    background: #000;
     color: #00ff88;
     overflow-x: hidden;
+}
+
+#matrixCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
 /* TERMINAL INTRO */
@@ -15,21 +24,10 @@ body {
     border-bottom: 2px solid #00ff88;
     box-shadow: 0 0 15px #00ff88;
 }
-
 #typed-text {
     white-space: pre-line;
     font-size: 1rem;
     color: #00ff88;
-    text-shadow: 0 0 10px #00ff88;
-}
-
-/* FADE-IN EFFECT */
-.fade-in {
-    animation: fade 1.4s ease-in-out;
-}
-@keyframes fade {
-    from { opacity: 0; transform: translateY(15px); }
-    to { opacity: 1; transform: translateY(0); }
 }
 
 /* NAV */
@@ -37,10 +35,37 @@ body {
     background-color: #000;
     padding: 20px 40px;
     border-bottom: 2px solid #00ff88;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
 .logo {
     font-size: 1.6rem;
     text-shadow: 0 0 10px #00ff88;
+}
+
+/* BUTTONS */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #00ff88;
+    background: #000;
+    color: #00ff88;
+    border-radius: 6px;
+    text-decoration: none;
+    box-shadow: 0 0 10px #00ff88;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.button:hover {
+    background: #00ff88;
+    color: #000;
+    box-shadow: 0 0 25px #00ff88;
+}
+.small-btn {
+    padding: 6px 14px;
+    font-size: 0.9rem;
 }
 
 /* HERO */
@@ -59,65 +84,41 @@ body {
     height: 260px;
     border-radius: 50%;
     border: 3px solid #00ff88;
-    box-shadow: 0 0 20px #00ff88, inset 0 0 10px #00ff88;
 }
 
-/* BUTTONS */
-.button {
-    display: inline-block;
-    padding: 12px 25px;
-    border: 2px solid #00ff88;
-    background: #000;
-    color: #00ff88;
-    font-weight: bold;
-    border-radius: 6px;
-    text-decoration: none;
-    box-shadow: 0 0 10px #00ff88;
-    transition: 0.3s;
-}
-.button:hover {
-    background: #00ff88;
-    color: #000;
-    box-shadow: 0 0 25px #00ff88;
+/* PROJECT GRID */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
 }
 
-/* PROJECTS */
-.project-section {
-    padding: 60px 20px;
-    max-width: 900px;
-    margin: auto;
-}
 .project-card {
-    background-color: #0d0d0d;
-    padding: 25px;
-    border-radius: 10px;
+    background: #0d0d0d;
     border: 2px solid #00ff88;
-    margin: 25px 0;
-    position: relative;
+    padding: 25px;
+    border-radius: 8px;
 }
-
-/* MOVING GLOWING BORDER */
 .glow-card {
-    box-shadow: 0 0 15px #00ff88;
-    animation: glowPulse 2.5s infinite alternate;
+    animation: pulse 2.5s infinite alternate;
 }
-@keyframes glowPulse {
+@keyframes pulse {
     from { box-shadow: 0 0 10px #00ff88; }
     to   { box-shadow: 0 0 25px #00ff88; }
 }
 
 /* FOOTER */
 footer {
-    text-align: center;
     padding: 20px;
+    text-align: center;
     border-top: 2px solid #00ff88;
     background: #000;
+    font-size: 0.9rem;
 }
 
-/* RESPONSIVE */
+/* MOBILE FIX */
 @media (max-width: 768px) {
-    .hero-container {
-        flex-direction: column;
-        text-align: center;
+    .project-grid {
+        grid-template-columns: 1fr;
     }
 }
