@@ -1,69 +1,120 @@
-/* HERO SLIDE FLEXBOX */
-#hero-slide {
+/* GENERAL */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* NAVIGATION */
+.topnav {
+    background-color: #222;
+    color: #fff;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+}
+
+.topnav a {
+    color: #fff;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.topnav a.active {
+    text-decoration: underline;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* HERO SECTION */
+.hero-section {
+    padding: 60px 20px;
+}
+
+.hero-container {
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    padding: 80px 40px;
-    gap: 50px;
-    flex-wrap: wrap;
+    gap: 40px;
 }
 
-/* Left side: profile picture */
 .hero-left .profile-pic {
-    width: 280px;
-    height: 280px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
-    border: 5px solid #8257e6;
-    box-shadow: 0 0 35px #bb86fc;
+    border: 3px solid #222;
 }
 
-/* Right side: text */
 .hero-right {
     max-width: 600px;
 }
 
 .hero-right h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.hero-right p {
-    font-size: 1.15rem;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-/* ABOUT DETAILS SECTION */
-#about-details {
-    text-align: center;
-    padding: 60px 20px;
-}
-
-#about-details h2 {
-    font-size: 2.2rem;
-    margin-bottom: 20px;
-}
-#about-details p {
-    max-width: 700px;
-    margin: 0 auto;
-    font-size: 1.1rem;
-    line-height: 1.6;
-}
-/* PROJECT CARD STYLES */
-.project-card {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 25px;
-    margin: 40px auto;
-    border-radius: 15px;
-    box-shadow: 0 0 25px #bb86fc;
-    max-width: 800px;
-    text-align: center;
-}
-
-.project-card h3 {
+    font-size: 2rem;
     margin-bottom: 15px;
 }
 
-.project-card p {
+.hero-right p {
     margin-bottom: 20px;
+}
+
+/* PROJECTS & RESUME */
+.project-section, .resume-section {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.project-card, .resume-card {
+    background-color: #fff;
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.project-card h3, .resume-card h3 {
+    margin-bottom: 10px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #222;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #555;
+}
+
+/* FOOTER */
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 60px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+    }
+
+    .hero-left, .hero-right {
+        text-align: center;
+    }
 }
