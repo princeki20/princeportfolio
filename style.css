@@ -1,125 +1,51 @@
-/* --------------------------- */
-/* 🌌 GALAXY BACKGROUND */
-/* --------------------------- */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: "Poppins", sans-serif;
-    color: #ffffff;
-    background: radial-gradient(circle at top, #0a0f33, #000000 70%);
-    overflow-x: hidden;
-}
-
-/* Animated stars */
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 200%;
-    height: 200%;
-    background: url("https://i.ibb.co/8x3q2tS/stars.png") repeat;
-    opacity: 0.4;
-    animation: moveStars 60s linear infinite;
-    z-index: -1;
-}
-
-@keyframes moveStars {
-    from { transform: translateY(0); }
-    to   { transform: translateY(-1000px); }
-}
-
-/* --------------------------- */
-/* HEADER */
-/* --------------------------- */
-header {
-    text-align: center;
-    padding: 80px 20px;
-}
-
-header h1 {
-    font-size: 3rem;
-    text-shadow: 0 0 20px #6b6bff;
-}
-
-header p {
-    font-size: 1.3rem;
-    opacity: 0.8;
-}
-
-/* --------------------------- */
-/* PROFILE SECTION */
-/* --------------------------- */
-#about {
+/* HERO SLIDE FLEXBOX */
+#hero-slide {
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 80px 20px;
-    gap: 40px;
+    justify-content: center;
+    padding: 80px 40px;
+    gap: 50px;
+    flex-wrap: wrap;
 }
 
-/* Bubble profile picture */
-.profile-pic {
-    width: 260px;
-    height: 260px;
+/* Left side: profile picture */
+.hero-left .profile-pic {
+    width: 280px;
+    height: 280px;
     border-radius: 50%;
     border: 5px solid #8257e6;
-    box-shadow: 0 0 30px #8257e6;
-    object-fit: cover;
-    animation: glowPulse 4s infinite ease-in-out;
+    box-shadow: 0 0 35px #bb86fc;
 }
 
-@keyframes glowPulse {
-    0% { box-shadow: 0 0 20px #8257e6; }
-    50% { box-shadow: 0 0 40px #bb86fc; }
-    100% { box-shadow: 0 0 20px #8257e6; }
-}
-
-/* Paragraph text */
-#about p {
+/* Right side: text */
+.hero-right {
     max-width: 600px;
-    font-size: 1.1rem;
-    line-height: 1.7;
-    background: rgba(255,255,255,0.05);
-    padding: 20px;
-    border-radius: 15px;
-    backdrop-filter: blur(4px);
 }
 
-/* --------------------------- */
-/* PROJECT SECTION */
-/* --------------------------- */
-#projects {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-#projects h2 {
+.hero-right h2 {
     font-size: 2.5rem;
-    text-shadow: 0 0 15px #bb86fc;
+    margin-bottom: 20px;
 }
 
-.project {
-    max-width: 700px;
-    margin: 40px auto;
-    background: rgba(255,255,255,0.05);
-    padding: 20px;
-    border-radius: 15px;
-    backdrop-filter: blur(4px);
+.hero-right p {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
 }
 
-.project img {
-    width: 100%;
-    border-radius: 10px;
-    margin-top: 15px;
-    box-shadow: 0 0 20px #8257e6;
-}
-
-/* --------------------------- */
-/* FOOTER */
-/* --------------------------- */
-footer {
+/* ABOUT DETAILS SECTION */
+#about-details {
     text-align: center;
-    padding: 30px;
-    opacity: 0.7;
+    padding: 60px 20px;
+}
+
+#about-details h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+#about-details p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
 }
